@@ -4,6 +4,8 @@ extend = require('extend'),
 counterSchema,
 IdentityCounter;
 
+mongoose.set('useFindAndModify', false);
+
 // Initialize plugin by creating counter collection in database.
 exports.initialize = function (connection) {
   try {
